@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.3.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'SocialReputationServices'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.projectlombok:lombok")
+    compile("com.amazonaws:aws-java-sdk:1.11.75")
+    compile("com.google.guava:guava:20.0")
+    compile("org.springframework.boot:spring-boot-starter-security")
+    compile("io.jsonwebtoken:jjwt:0.7.0")
+	compile("org.apache.commons:commons-lang3:3.5")
+	compile("org.springframework.retry:spring-retry:1.1.5.RELEASE")
+	compile("org.springframework.boot:spring-boot-starter-aop")
+	compile("org.apache.httpcomponents:httpmime:4.5.2")
+	
+    testCompile("junit:junit")
+}
+

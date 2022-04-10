@@ -1,0 +1,7 @@
+<ion-tabs (ionChange)="tabChanged($event)" tabsHideonSubPages="true">
+
+<ion-tab [root]="feedTab" tabTitle="Feed" tabIcon="paper" tabUrlPath="#/feed" tabsHideOnSubPages="true"></ion-tab>
+  <ion-tab [root]="createActivityTab" tabTitle="Create" tabIcon="create" tabUrlPath="#/create" tabsHideOnSubPages="true"></ion-tab>
+  <ion-tab [root]="profileTab" tabTitle="Profile" tabIcon="person" tabUrlPath="#/profile" tabsHideOnSubPages="true"></ion-tab>
+
+</ion-tabs>
